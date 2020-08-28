@@ -116,3 +116,98 @@ console.log(fruit.split(''));
 console.log(fruit.split(',')); //split by a comma
 
 // Array
+let fruits = ['banana', 'apple', 'orange', 'pineapples'];
+fruits = new Array('banana', 'apple', 'orange', 'pineapples');
+
+console.log(fruits[2]); // access value at index 2nd 
+
+fruits[0] = 'pear';
+console.log(fruits); // change values
+
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
+
+// array common methods
+console.log('to string', fruits.toString());
+console.log(fruits.join(' - '));
+console.log(fruits.pop(), fruits); // removes last item
+console.log(fruits.push('blackberries'), fruits); // appends
+console.log(fruits[4]);
+fruits[fruits.length] = 'new fruit'; // another way to append 
+console.log(fruits); 
+fruits.shift(); // removes first elements from an array 
+console.log(fruits); 
+fruits.unshift('kiwi'); // add first element to an array
+console.log(fruits);
+
+let vegetables = ['asparagus', 'tomato', 'broccoli']; 
+let allGroceries = fruits.concat(vegetables); // adding arrays
+console.log(allGroceries);
+console.log(allGroceries.slice(1, 4)); 
+console.log(allGroceries.reverse()); 
+console.log(allGroceries.sort()); // default sort is alphabetical
+
+let someNumbers = [5, 10, 2, 25, 3, 255, 1, 2, 5, 334, 321, 2]; 
+console.log(someNumbers.sort(function(a, b) {return a-b})); //sorting in an ascending order
+console.log(someNumbers.sort(function(a, b) {return b-a})); //sorting in an descending order
+
+let emptyArray = new Array(); 
+for (num = 0; num <= 10; num++) {
+    emptyArray.push(num);
+}
+console.log(emptyArray); 
+
+// Objects in Javascript 
+// dictionaries in Python 
+
+let student = {
+    first: 'Sazied', 
+    last: 'Hassan', 
+    age: 23, 
+    height: 170,
+    studentInfo: function() {  // passing a function to an object as a key value pair 
+        return this.first + ' ' + this.last + '\n' + this.age + '\n' + this.height; 
+    }
+};
+// console.log('name:', student.first, student.last);
+// console.log('age:', student.age);
+// console.log('height:', student.height, 'cm'); 
+// student. first = 'not Sazied'; // change value in key pairs in objetcs 
+// console.log(student.first); 
+student.age++; 
+console.log(student.age); 
+console.log(student.studentInfo()); 
+
+// Conditionals, Control flows (if else)
+// 18-35 is my target demographic 
+/* Bollean Logical Operators 
+&& AND
+|| OR */ 
+
+// let age = prompt('What if you age?'); 
+
+// if ( (age >= 18) && (age <= 35) ) {
+//     status = 'target demo'; 
+//     console.log(status);
+// } else {
+//     status = 'not my audience';
+//     console.log(status);  
+// }
+
+// Switch statements in Javascript 
+// defferentiate between weekday vs. weekend 
+// day 0 --> Sunday 
+// day 6 --> Saturday 
+
+switch (6) {
+    case 0:
+        text = 'weekend';
+        break;
+    case 6:
+        text = 'weekend';
+        break;
+    default:
+        text = 'weekday';
+}
+console.log(text); 
